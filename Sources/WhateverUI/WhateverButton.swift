@@ -8,9 +8,13 @@
 import SwiftUI
 
 
-struct WhateverButton: View {
+public struct WhateverButton: View {
+    
+    init(action: @escaping () -> Void) {
+        self.action = action
+    }
     var action: ()-> ()
-    var body: some View {
+    public var body: some View {
         Button {
             action()
         } label: {
