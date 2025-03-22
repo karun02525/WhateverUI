@@ -10,7 +10,7 @@ import SwiftUI
 
 public struct WhateverButton: View {
     
-    init(action: @escaping () -> Void) {
+    internal init(action: @escaping () -> Void) {
         self.action = action
     }
     var action: ()-> ()
